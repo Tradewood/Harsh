@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      $(document).ready(function(){
+        $(".text").hover(function(){
+          $(".text").addClass(
+            "animate__animated animate__backInRight"
+          )
+        });
+      });
+      $(document).ready(function(){
+        $(".btn").hover(function(){
+          $(".btn").addClass(
+            "animate__animated animate__wobble"
+          )
+        });
+      });
+      $(document).ready(function(){
+        $(".logo").hover(function(){
+          $(".logo").addClass(
+            "animate__animated animate__bounce"
+          )
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div id="menu-btn" class="fas fs-bars"></div>
+    <a href="#" class="logo"> <span>Royal</span> BIKES </a>
+    <nav class="navbar">
+      <a href="home.html">home</a>
+      <a href="bikes.html">bikes</a>
+      <a href="about us.html">About Us</a>
+      <a href="contact us.html">contact</a>
+    </nav>
+
+  <div id="login-btn">
+    <a href="LOGIN.HTML">
+     <button  class="btn">Login</button></a>
+     <i class="far fa-user"></i> 
+  </div> 
+  </header>
+  <div class="text">
+    <h1>Welcome To ROYAL BIKES</h1><br>
+        <h2>A NEW COMPLETE Of ALL BIKES</h2><br>
+        <span class="changecontent"></span>
+  </div>
+</body>
+</html>

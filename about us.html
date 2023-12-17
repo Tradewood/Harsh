@@ -1,0 +1,123 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    $(document).ready(function(){
+        $(".btn").hover(function(){
+          $(".btn").addClass(
+            "animate__animated animate__wobble"
+          )
+        });
+      });
+      $(document).ready(function(){
+        $(".logo").hover(function(){
+          $(".logo").addClass(
+            "animate__animated animate__bounce"
+          )
+        });
+      });
+      $(document).ready(function(){
+        $("#about").hover(function(){
+          $("#about").addClass(
+            "animate__animated animate__flipInX"
+          )
+        });
+      });
+   </script>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      body{
+        background: url("background 2.jpg") no-repeat center center/cover;
+      }
+
+      footer{
+        background: #fff;
+        padding: 20px;
+      }
+      footer p{
+        color: #fff;
+      }
+    </style>
+</head>
+<body>
+    <header class="header">
+      <div id="menu-btn" class="fas fs-bars"></div>
+      <a href="#" class="logo"> <span> HET </span> BIKES </a>
+      <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="bikes.html">bikes</a>
+      <a href="about us.html">About Us</a>
+      <a href="contact us.html">contact</a>
+      </nav>
+
+      <div id="login-btn">
+        <a href="login.html">
+        <button  class="btn">Login</button></a>
+        <i class="far fa-user"></i> 
+      </div> 
+    </header>
+      <section id="about">
+        <div class="about-1">
+            <h1>ABOUT US</h1>
+            <p> Royal Bike was established with the aim of providing the simplest car buying & selling experience to everyone around the world. From researching the perfect bike to getting the delivery from the seller is made hassle-free with just a few clicks. We understand that a bike is one of the most expensive asset a consumer associates his lifestyle with and our platform makes sure that your investment is worth it, with unbiased and elaborate information about every bike listed. </p>
+        </div>
+      
+        <div id="about-2">
+          <div class="content-box-lg">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-4">
+                  <div class="about-item text-center">
+                    <i class="fa fa-book"></i>
+                    <h3>History</h3>
+                    <hr>
+                    <p> The showroom was registered on 9 Octobar 2004 as ROYAL bikes Pvt. Ltd under the name of the Directors Mr.Harsh Dhamal. </p> 
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="about-item text-center">
+                    <i class="fa fa-book"></i>
+                    <h3>Complete transparency</h3>
+                    <hr>
+                    <p> We offer best  price  guarantee  and  will  never  send  any  hidden  charges your way, and customer satisfaction is our first policy.  </p>      
+                  </div>
+                </div>    
+                  <div class="col-md-4">
+                  <div class="about-item text-center">
+                    <i class="fa fa-book"></i>
+                    <h3>Service & Repair</h3>
+                    <hr>
+                    <p> Watch do-it-yourself tutorials. Check current manufacturer recalls. Find local repair options. Were here to help throughout your ownership experience. </p>      
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="about-item text-center">
+                    <i class="fa fa-book"></i>
+                    <h3>Personalized Experience</h3>
+                    <hr>
+                    <p> Every customer is unique; each demands different things from a set of four wheels. That’s why our inventory is varied and the people you meet in your interactions with Spinny are trained to listen first and at length, then make recommendations. </p>      
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="about-item text-center">
+                    <i class="fa fa-book"></i>
+                    <h3>Shop</h3>
+                    <hr>
+                    <p> Opening a car showroom costs a lot so we are on our website and on the internet and instead of the showroom costs we focus on the Swissness of your car. </p>      
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  
+</body>
+</html>

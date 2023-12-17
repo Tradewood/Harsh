@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   <title>login form</title>
+   <link rel="stylesheet" href="login.css">
+   <script>
+    $(document).ready(function(){
+        $(".form-container").hover(function(){
+          $(".form-container").addClass(
+            "animate__animated animate__jackInTheBox"
+          )
+        });
+      });
+   </script>
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>   <script>
+       $(document).ready(function () {
+           
+       function validateFname(name) {
+       var namePattern = /^[A-Za-z ]{2,30}$/;
+       return namePattern.test(name);
+       }
+       function validateMobile(mobile) {
+       var mobilePattern = /^[0-9]{10}$/;
+       return mobilePattern.test(mobile);
+       }
+       function validateEmail(email) {
+       var emailPattern = /^[\w\.]+@([\w]+\.)+[\w]{2,4}$/;;
+       return emailPattern.test(email);
+       }
+       function validatePassword(password) {
+       var passwordPattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?!=.*[/s]).{8,20}$/ ;
+       return passwordPattern.test(password);
+       }
+
+       $('#reg').submit(function (e) {
+           e.preventDefault();
+           var is_valid = true;
+           
+           var fn = $('#fn1').val();
+           if (fn == "") {
+               $('#fn1_error').html("Fullname is required Field");
+               $('#fn1_error').css('color', 'red');
+               is_valid = false;
+           } 
+           else {
+               if (validateFname(fn)) {
+                   $('#fn1_error').html("");
+               } 
+               else {
+                   $('#fn1_error').html("Name contains only letters and minimum length is 2 and maximum length is 30");
+                   $('#fn1_error').css('color', 'red');
+                   is_valid = false;
+               }
+           }
+
+           var mn = $('#mobile1').val();
+           if (mn == "") {
+               $('#mobile_error').html("Mobile number is required Field");
+               $('#mobile_error').css('color', 'red');
+               is_valid = false;
+           } else {
+               if (validateMobile(mn)) {
+                   $('#mobile_error').html("");
+               } else {
+                   $('#mobile_error').html(
+                       "Mobile number must contain exactly 10 digits.");
+                   $('#mobile_error').css('color', 'red');
+                   is_valid = false;
+               }
+           }
+
+           var em = $('#email1').val();
+           if (em == "") {
+               $('#email_error').html("Email is required Field");
+               $('#email_error').css('color', 'red');
+               is_valid = false;
+           } else {
+               if (validateEmail(em)) {
+                   $('#email_error').html("");
+               } else {
+                   $('#email_error').html("Email is not valid");
+                   $('#email_error').css('color', 'red');
+
+               }
+           }
+           
+           var pwd = $('#pwd1').val();
+           if (pwd == "") {
+               $('#pwd_error').html("Password is required Field");
+               $('#pwd_error').css('color', 'red');
+               is_valid = false;
+           } else {
+               if (validatePassword(pwd)) {
+                   $('#pwd_error').html("");
+               } else {
+                   $('#pwd_error').html("Password must contain at least one uppercase letter, one lowercase letter,one digit and one special symbol and length must be between 8 to 20 characters.");
+                   $('#pwd_error').css('color', 'red');
+                   is_valid = false;
+               }
+           }
+           
+           if (is_valid) {
+               this.submit();
+           }
+       });
+   });
+</script>
+
+</head>
+<body>
+   
+   <div class="form-container">
+      <form action="home.html" method="get" id="reg">
+         <h3>login</h3>
+         <input type="text" name="fn" id="fn1" placeholder="Enter your first name"><br>
+         <span id="fn1_error"></span>
+         <input type="number" name="mn" id="mobile1" placeholder="Enter your Mobile No."><br>
+         <span id="mobile_error"></span>
+         <input type="email" name="em" id="email1" placeholder="Enter your email"><br>
+         <span id="email_error"></span>
+         <input type="password" name="ps" id="pwd1" placeholder="Enter your password"><br>
+         <span id="pwd_error"></span>
+         <input type="submit" value="Login" id="submit1" class="form-btn">
+      </form>
+   </div>  
+</body>
+</html>
